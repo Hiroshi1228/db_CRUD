@@ -105,6 +105,7 @@ public class DAO {
             stm=con.prepareStatement(sql);
             stm.setString(1, u.getEmail());
             stm.setString(2, u.getPassword());
+            stm.setString(3, u.getId());
             r=stm.executeUpdate();
             if (r==1) {
                 return 1;
